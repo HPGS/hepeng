@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guishan.dao.UserDao">
+    
+	<sql id="claimBillcodeColumns">
+		a.id AS "id",<!--ID-->
+		a.name as "name",
+		a.password as "password"
+			</sql>
+	
+	<sql id="claimBillcodeJoins">
+	</sql>
+
+    
+	<select id="query" resultType="com.guishan.entity.User">
+		SELECT 
+			<include refid="claimBillcodeColumns"/>
+		FROM user a
+		</select>
+</mapper>
